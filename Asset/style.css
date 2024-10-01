@@ -1,0 +1,206 @@
+html {
+  font-size: 62.5%; /* 1 rem = 10px, giúp dễ dàng tính toán kích thước */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif; /* Đặt font cho toàn bộ trang */
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Màu nền nhẹ cho trang */
+}
+
+.fa-solid {
+  font-size: 1.7rem;
+}
+
+/* ERROR */
+.error {
+  color: red;
+  font-size: 1.5rem;
+  display: block;
+  margin-top: -2rem;
+
+  /* Thêm khoảng cách giữa tiêu đ�� và nội dung l��i */
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem; /* Kích thước tiêu đề */
+  font-weight: 700;
+  margin: 2rem 0; /* Thêm khoảng cách trên và dưới */
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 30rem; /* Kích thước ô nhập liệu */
+  padding: 1rem; /* Padding cho ô nhập liệu */
+  font-size: 2rem; /* Kích thước chữ trong ô nhập */
+  border: 1px solid #ccc; /* Đường viền ô nhập */
+  border-radius: 0.5rem; /* Bo góc ô nhập */
+  margin-bottom: 1rem; /* Khoảng cách giữa các ô nhập */
+}
+
+.form-student label {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+button {
+  padding: 1rem 2rem; /* Padding cho nút */
+  font-size: 2rem; /* Kích thước chữ trong nút */
+  background-color: #4caf50; /* Màu nền cho nút */
+  color: white; /* Màu chữ */
+  border: none; /* Không có viền */
+  border-radius: 0.5rem; /* Bo góc cho nút */
+  cursor: pointer; /* Đổi con trỏ khi hover vào nút */
+  transition: background-color 0.3s; /* Hiệu ứng chuyển màu khi hover */
+}
+
+button:hover {
+  background-color: #45a049; /* Màu nền khi hover */
+}
+
+.form {
+  display: flex;
+  align-items: start;
+  justify-content: space-e;
+}
+.form-student {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Để các thành phần có thể xếp xuống dòng nếu không đủ chỗ */
+  margin-bottom: 3rem; /* Khoảng cách dưới form */
+  position: relative;
+}
+
+.form-student input {
+  margin-bottom: 30px;
+}
+.score {
+  display: flex;
+  flex-direction: column; /* Xếp dọc các ô nhập điểm */
+  gap: rem; /* Khoảng cách giữa các ô nhập điểm */
+  margin-left: 5rem;
+  margin-right: 40rem;
+  margin-top: 2.5rem;
+}
+#btn-add {
+  position: absolute;
+  bottom: -5rem;
+  left: 35rem;
+}
+
+.information {
+  margin-left: 35rem;
+  margin-top: 2.5rem;
+}
+.search-section {
+  text-align: center; /* Căn giữa nội dung tìm kiếm */
+  margin-bottom: 2rem; /* Khoảng cách dưới phần tìm kiếm */
+}
+
+.search-section h2 {
+  font-size: 2rem;
+  padding: 3rem;
+  font-weight: 700;
+  margin-top: 10rem;
+}
+
+#search-button {
+  margin-left: 1rem;
+}
+
+.average-grade {
+  text-align: center; /* Căn giữa nội dung điểm trung bình */
+}
+
+.filter {
+  margin-top: 1rem;
+}
+
+#sort_button {
+  margin-left: 0rem;
+  font-size: 1rem;
+}
+
+.student-list h2 {
+  padding: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+th {
+  font-size: 2rem;
+  background-color: #008dda;
+}
+
+/* Phong cách cho popup */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  border-radius: 8px;
+  background-color: white;
+  margin: 0.5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40rem;
+}
+
+.popup-content h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 5px 0 30px;
+}
+
+.popup-content label {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+.popup-content input {
+  font-size: 1.5rem;
+  display: block;
+  font-weight: 700;
+}
+.popup-content label {
+  margin-bottom: 5px;
+}
+
+.close {
+  color: red;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

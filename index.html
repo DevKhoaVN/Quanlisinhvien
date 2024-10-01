@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Asset/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Asset/style.css" />
+    <title>Quản lý sinh viên</title>
+  </head>
+  <body>
+    <div id="manage-student">
+      <h1>Quản lý sinh viên</h1>
+      <div class="form-student">
+        <form action="" class="form" id="student-form">
+          <div class="information">
+            <!-- Nhập tên -->
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              autocomplete="name"
+              placeholder="Nhập tên sinh viên"
+            />
+            <span class="error name_error" style="color: red"></span><br />
+
+            <!-- Nhập tuổi -->
+            <input
+              type="number"
+              name="age"
+              id="age"
+              required
+              autocomplete="age"
+              placeholder="Nhập tuổi của sinh viên"
+            />
+            <span class="error age_error" style="color: red"></span><br />
+
+            <!-- Nhập lớp -->
+            <input
+              type="text"
+              name="class"
+              id="class"
+              required
+              autocomplete="class"
+              placeholder="Nhập lớp của sinh viên"
+            />
+
+            <!-- Nhập trường -->
+            <input
+              type="text"
+              name="school"
+              id="school"
+              required
+              autocomplete="organization"
+              placeholder="Nhập trường"
+            />
+            <span class="error school_error"></span><br />
+          </div>
+
+          <div class="score">
+            <input
+              type="number"
+              name="math"
+              id="math"
+              placeholder="Nhập điểm toán"
+              required
+              min="0"
+              max="10"
+              autocomplete="off"
+            />
+
+            <input
+              type="number"
+              name="english"
+              id="english"
+              placeholder="Nhập điểm Tiếng Anh"
+              required
+              min="0"
+              max="10"
+              autocomplete="off"
+            />
+
+            <input
+              type="number"
+              name="lecture"
+              id="lecture"
+              placeholder="Nhập điểm Văn"
+              required
+              min="0"
+              max="10"
+              autocomplete="off"
+            />
+          </div>
+          <button type="submit" id="btn-add">Thêm</button>
+        </form>
+      </div>
+
+      <div class="search-section">
+        <h2>Tìm kiếm sinh viên nâng cao</h2>
+        <input
+          type="text"
+          id="search"
+          placeholder="Nhập tên sinh viên để tìm kiếm..."
+          autocomplete="off"
+        />
+        <button id="search-button" onclick="searchStudent()">
+          <i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm
+        </button>
+      </div>
+    </div>
+
+    <div class="student-list">
+      <div class="filter">
+        <h2>Danh sách sinh viên</h2>
+        <button id="sort_button" onclick="sortAverageScore()">
+          <i class="fa-solid fa-filter"></i> Sắp xếp theo điểm trung bình
+        </button>
+      </div>
+
+      <table id="student-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Tuổi</th>
+            <th>Lớp</th>
+            <th>Trường</th>
+            <th>Toán</th>
+            <th>Văn</th>
+            <th>Tiếng anh</th>
+            <th style="width: 20rem; text-align: center">
+              Điểm trung bình môn
+            </th>
+            <th style="width: 30rem"></th>
+          </tr>
+        </thead>
+        <tbody id="student-display">
+          <!-- Dữ liệu sẽ được thêm vào đây -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Form popup để sửa thông tin sinh viên -->
+    <div id="edit-popup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2>Chỉnh sửa thông tin sinh viên</h2>
+        <form id="edit-student-form">
+          <label for="edit-name">Họ tên:</label>
+          <input
+            type="text"
+            id="edit-name"
+            name="name"
+            required
+            autocomplete="name"
+          /><br />
+
+          <label for="edit-age">Tuổi:</label>
+          <input
+            type="number"
+            id="edit-age"
+            name="age"
+            required
+            min="1"
+            max="100"
+            autocomplete="age"
+          /><br />
+
+          <label for="edit-class">Lớp:</label>
+          <input
+            type="text"
+            id="edit-class"
+            name="class"
+            required
+            autocomplete="class"
+          /><br />
+
+          <label for="edit-school">Trường:</label>
+          <input
+            type="text"
+            id="edit-school"
+            name="edit-school"
+            required
+            autocomplete="organization"
+          /><br />
+
+          <label for="edit-math">Toán:</label>
+          <input type="number" id="edit-math" name="edit-math" required /><br />
+          <label for="edit-lecture">Văn:</label>
+          <input
+            type="number"
+            id="edit-lecture"
+            name="edit-lecture"
+            required
+            autocomplete="off"
+          /><br />
+          <label for="edit-english">Tiếng Anh:</label>
+          <input
+            type="number"
+            id="edit-english"
+            name="edit-english"
+            required
+            autocomplete="off"
+          /><br />
+
+          <button type="button" id="save-button" onclick="saveEdit()">
+            Lưu
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
