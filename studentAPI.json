@@ -1,0 +1,306 @@
+{
+  "students":
+  [
+    {
+        "id": 1,
+        "name": "Liam",
+        "age": 16,
+        "class": "10A1",
+        "school": "International School ABC",
+        "math": 80,
+        "lecture": 75,
+        "english": 90
+    },
+    {
+        "id": 2,
+        "name": "Emma",
+        "age": 17,
+        "class": "10A1",
+        "school": "International School ABC",
+        "math": 60,
+        "lecture": 85,
+        "english": 70
+    },
+    {
+        "id": 3,
+        "name": "Noah",
+        "age": 16,
+        "class": "10A1",
+        "school": "International School ABC",
+        "math": 90,
+        "lecture": 90,
+        "english": 95
+    },
+    {
+        "id": 4,
+        "name": "Olivia",
+        "age": 16,
+        "class": "10A2",
+        "school": "International School XYZ",
+        "math": 70,
+        "lecture": 80,
+        "english": 60
+    },
+    {
+        "id": 5,
+        "name": "William",
+        "age": 17,
+        "class": "10A2",
+        "school": "International School XYZ",
+        "math": 85,
+        "lecture": 75,
+        "english": 80
+    },
+    {
+        "id": 6,
+        "name": "Ava",
+        "age": 16,
+        "class": "10A3",
+        "school": "International School ABC",
+        "math": 95,
+        "lecture": 85,
+        "english": 90
+    },
+    {
+        "id": 7,
+        "name": "James",
+        "age": 17,
+        "class": "10A3",
+        "school": "International School ABC",
+        "math": 50,
+        "lecture": 65,
+        "english": 70
+    },
+    {
+        "id": 8,
+        "name": "Sophia",
+        "age": 16,
+        "class": "10A2",
+        "school": "International School XYZ",
+        "math": 80,
+        "lecture": 90,
+        "english": 85
+    },
+    {
+        "id": 9,
+        "name": "Lucas",
+        "age": 17,
+        "class": "10A3",
+        "school": "International School XYZ",
+        "math": 78,
+        "lecture": 88,
+        "english": 82
+    },
+    {
+        "id": 10,
+        "name": "Mia",
+        "age": 16,
+        "class": "10A1",
+        "school": "International School ABC",
+        "math": 92,
+        "lecture": 84,
+        "english": 80
+    },
+    {
+        "id": 11,
+        "name": "Ethan",
+        "age": 17,
+        "class": "10A1",
+        "school": "International School ABC",
+        "math": 75,
+        "lecture": 60,
+        "english": 70
+    },
+    {
+        "id": 12,
+        "name": "Isabella",
+        "age": 16,
+        "class": "10A2",
+        "school": "International School XYZ",
+        "math": 88,
+        "lecture": 90,
+        "english": 95
+    },
+    {
+        "id": 13,
+        "name": "Aiden",
+        "age": 17,
+        "class": "10A3",
+        "school": "International School ABC",
+        "math": 85,
+        "lecture": 80,
+        "english": 75
+    },
+    {
+        "id": 14,
+        "name": "Charlotte",
+        "age": 16,
+        "class": "10A1",
+        "school": "International School ABC",
+        "math": 90,
+        "lecture": 85,
+        "english": 87
+    },
+    {
+        "id": 15,
+        "name": "Oliver",
+        "age": 17,
+        "class": "10A1",
+        "school": "International School ABC",
+        "math": 60,
+        "lecture": 70,
+        "english": 80
+    },
+    {
+        "id": 16,
+        "name": "Amelia",
+        "age": 16,
+        "class": "10A2",
+        "school": "International School XYZ",
+        "math": 72,
+        "lecture": 76,
+        "english": 82
+    },
+    {
+        "id": 17,
+        "name": "Henry",
+        "age": 17,
+        "class": "10A3",
+        "school": "International School ABC",
+        "math": 94,
+        "lecture": 85,
+        "english": 88
+    },
+    {
+        "id": 18,
+        "name": "Harper",
+        "age": 16,
+        "class": "10A2",
+        "school": "International School XYZ",
+        "math": 89,
+        "lecture": 90,
+        "english": 91
+    },
+    {
+        "id": 19,
+        "name": "Jackson",
+        "age": 17,
+        "class": "10A1",
+        "school": "International School ABC",
+        "math": 72,
+        "lecture": 78,
+        "english": 76
+    },
+    {
+        "id": 20,
+        "name": "Ella",
+        "age": 16,
+        "class": "10A2",
+        "school": "International School XYZ",
+        "math": 80,
+        "lecture": 85,
+        "english": 90
+    },
+    {
+        "id": 21,
+        "name": "Luca",
+        "age": 17,
+        "class": "10A3",
+        "school": "International School ABC",
+        "math": 76,
+        "lecture": 84,
+        "english": 82
+    },
+    {
+        "id": 22,
+        "name": "Sofia",
+        "age": 16,
+        "class": "10A1",
+        "school": "International School ABC",
+        "math": 90,
+        "lecture": 88,
+        "english": 91
+    },
+    {
+        "id": 23,
+        "name": "Benjamin",
+        "age": 17,
+        "class": "10A2",
+        "school": "International School XYZ",
+        "math": 84,
+        "lecture": 78,
+        "english": 86
+    },
+    {
+        "id": 24,
+        "name": "Scarlett",
+        "age": 16,
+        "class": "10A3",
+        "school": "International School ABC",
+        "math": 92,
+        "lecture": 89,
+        "english": 85
+    },
+    {
+        "id": 25,
+        "name": "Samuel",
+        "age": 17,
+        "class": "10A1",
+        "school": "International School ABC",
+        "math": 70,
+        "lecture": 60,
+        "english": 75
+    },
+    {
+        "id": 26,
+        "name": "Grace",
+        "age": 16,
+        "class": "10A2",
+        "school": "International School XYZ",
+        "math": 95,
+        "lecture": 92,
+        "english": 90
+    },
+    {
+        "id": 27,
+        "name": "David",
+        "age": 17,
+        "class": "10A3",
+        "school": "International School ABC",
+        "math": 76,
+        "lecture": 81,
+        "english": 70
+    },
+    {
+        "id": 28,
+        "name": "Zoe",
+        "age": 16,
+        "class": "10A1",
+        "school": "International School ABC",
+        "math": 88,
+        "lecture": 80,
+        "english": 75
+    },
+    {
+        "id": 29,
+        "name": "Luke",
+        "age": 17,
+        "class": "10A2",
+        "school": "International School XYZ",
+        "math": 82,
+        "lecture": 77,
+        "english": 90
+    },
+    {
+        "id": 30,
+        "name": "Chloe",
+        "age": 16,
+        "class": "10A3",
+        "school": "International School ABC",
+        "math": 70,
+        "lecture": 65,
+        "english": 80
+    }
+  ]
+  
+}

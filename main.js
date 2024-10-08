@@ -1,22 +1,35 @@
-var StudentAPI = "http://localhost:3000/students";
-let currentStudentId = null; // Biến để lưu ID sinh viên hiện tại
+// Dùng npm run start:json để chạy json server
 
+// endpoint fake api 
+var StudentAPI = "http://localhost:3000/students"; 
+
+// Biến để lưu ID sinh viên hiện tại
+let currentStudentId = null; 
+
+// Dùng npm run start:json để chạy json server
+
+// hàm chạy app
 function start() {
   getListStudent(renderHandleStudent);
 }
 
+// chạy app
 start();
 
+// lấy ra danh sách học sinh từ api server
 function getListStudent(callback) {
   fetch(StudentAPI)
     .then((response) => response.json())
     .then(callback);
 }
 
+//render ra giao diện hện thị bảng
 function renderHandleStudent(students) {
+  // lấy dom 
   var renderStudent = document.querySelector("#student-display");
   renderStudent.innerHTML = ""; // Xóa nội dung cũ trước khi thêm mới
 
+  // duyệt qua từng phần tử và hiển thị ra bảng
   students.forEach((student) => {
     html = `
       <tr class = student-id-${student.id}>
@@ -41,14 +54,20 @@ function renderHandleStudent(students) {
         </td>
       </tr>
     `;
+    // bên trên thêm nút xóa và sửa  , đồng thời mở pop up cho việc chỉnh sửa
+
+    // render ra trình duyệt
     renderStudent.innerHTML += html;
   });
 }
+
+// lawmsg nghe sự kiện thêm học sinh
 document.querySelector("#student-form").addEventListener("submit", addStudent); // callback add Student
 
 function addStudent(event) {
   event.preventDefault(); // Ngăn chặn form gửi mặc định
 
+  // tạo endpoint để thực hiện validate
   var isCheck = true;
 
   // Lấy các giá trị từ form
@@ -89,13 +108,15 @@ function addStudent(event) {
       lecture: parseInt(document.querySelector("#lecture").value),
     };
 
-    // Gửi dữ liệu qua HTTP POS
+    // Gửi dữ liệu qua HTTP POST
     fetch(`${StudentAPI}`, {
-      // Thay 'API_URL' bằng đường dẫn API của bạn
+     
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
+
+      // chuyển đổi đối tượng js sang json để gửi đi
       body: JSON.stringify(newStudent),
     })
       .then((response) => response.json())
@@ -127,11 +148,13 @@ function saveEdit() {
     lecture: document.querySelector("#edit-lecture").value,
   };
 
+  // update theo id truyền trên url
   fetch(`${StudentAPI}/${currentStudentId}`, {
     method: "PUT", // hoặc PATCH
     headers: {
       "Content-Type": "application/json",
     },
+    // chuyển đổi đối tượng js sang json để gửi đi
     body: JSON.stringify(updatedStudent),
   })
     .then((response) => {
@@ -147,6 +170,7 @@ function saveEdit() {
     .catch((error) => console.error("Có lỗi xảy ra:", error));
 }
 
+// xóa học sinh theo id trên url
 function deleteStudent(id) {
   fetch(`${StudentAPI}/${id}`, {
     method: "DELETE",
@@ -160,6 +184,8 @@ function deleteStudent(id) {
       deleteStudent.remove();
     });
 }
+
+// hàm tìm kiếm sinh viên
 function searchStudent() {
   const searchTerm = document.getElementById("search").value.trim(); // Dùng trim để loại bỏ khoảng trắng
   console.log("Searching for:", searchTerm); // In ra giá trị tìm kiếm
@@ -183,6 +209,7 @@ function searchStudent() {
     .catch((error) => console.error("Error:", error));
 }
 
+// hàm tính toán lấy ra giá trị trung bình môn
 function sortAverageScore() {
   getListStudent((students) => {
     var result = students.sort((a, b) => {
